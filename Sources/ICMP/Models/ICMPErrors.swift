@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ICMPErrors: Error {
+public enum ICMPErrors: Error {
     /// Не удалось создать сокет
     case SocketInitializationError
     /// Не удалось разрешить адрес для host-а
@@ -20,7 +20,7 @@ enum ICMPErrors: Error {
 
 extension ICMPErrors: LocalizedError {
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .SocketInitializationError:
             return "Не удалось создать сокет"

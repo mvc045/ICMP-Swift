@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol ICMPDelegate: AnyObject {
+public protocol ICMPDelegate: AnyObject {
     func didReceive(_ response: PingResponse?, _ error: ICMPErrors?)
 }
 
-final class ICMP {
+final public class ICMP {
     
     let host: String
     let identifier: UInt16
     let message: String
     
-    weak var delegate: ICMPDelegate?
+    weak public var delegate: ICMPDelegate?
     
-    init(host: String, message: String = "Ping") {
+    public init(host: String, message: String = "Ping") {
         self.host = host
         self.identifier = UInt16.random(in: 0...10_000)
         self.message = message
     }
     
-    func ping() {
+    public func ping() {
         var seq: UInt16 = 0
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             do {
@@ -43,7 +43,7 @@ final class ICMP {
     
     /// requestCount - кол-во echo запросов
     /// interval - интервал с каким будут отправляться echo запросы. Default = 1 сек.
-    func ping(requestCount: Int, interval: TimeInterval = 1.0) {
+    public func ping(requestCount: Int, interval: TimeInterval = 1.0) {
         var seq: UInt16 = 0
         let timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
             do {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PingResponse {
+public struct PingResponse {
     
     var ip: String
     var seq: Int
