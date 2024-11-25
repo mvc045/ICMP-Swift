@@ -9,10 +9,10 @@ import Foundation
 
 public struct PingResponse {
     
-    var ip: String
-    var seq: Int
-    var ttl: Int
-    var bytesLength: Int
-    var duration: Double
+    public var ip: String
+    public var seq: Int
+    public var ttl: Int
+    public var bytesLength: Int
+    public var duration: Double
     
 }

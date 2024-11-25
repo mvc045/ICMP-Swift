@@ -1,0 +1,15 @@
+{
+  "originHash" : "64a9f6e5191aeedba8f803afe34c629bc19b33374eb207942cbddf8a608fdeb9",
+  "pins" : [
+    {
+      "identity" : "icmp-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mvc045/ICMP-Swift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "94e72924a9cafcdc51037321e77c01d35e9a5472"
+      }
+    }
+  ],
+  "version" : 3
+}
